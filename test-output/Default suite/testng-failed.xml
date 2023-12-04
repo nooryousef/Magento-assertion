@@ -7,8 +7,6 @@
         <methods>
           <include name="MyAfterTest"/>
           <include name="LoginTest"/>
-          <include name="SignUp"/>
-          <include name="LogOut"/>
           <include name="MyBeforeTest"/>
         </methods>
       </class> <!-- MagentoCases.MytestCases -->

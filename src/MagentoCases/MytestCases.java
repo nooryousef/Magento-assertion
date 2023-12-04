@@ -68,6 +68,12 @@ public void LoginTest() {
 	String account=driver.findElement(By.className("base")).getText();
 	softassert.assertEquals(account.contains("My Account"), true);
 	softassert.assertAll();
+	
+	String info=driver.findElement(By.className("block-title")).getText();
+	softassert.assertEquals(info.contains(" Account Information"), false, info);
+	softassert.assertAll();
+
+	
 }
 
 
