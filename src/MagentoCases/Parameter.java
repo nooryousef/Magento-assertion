@@ -18,7 +18,7 @@ public class Parameter {
 	
 	static String logout= "https://magento.softwaretestingboard.com/customer/account/logout/ " ; 
 	
-	static String login="href=\"https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS9jdXN0b21lci9hY2NvdW50L2xvZ291dFN1Y2Nlc3Mv/";	Random rand=new Random();
+	static String login="https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS9jdXN0b21lci9hY2NvdW50L2xvZ291dFN1Y2Nlc3Mv/";	Random rand=new Random();
 	int IndexName=rand.nextInt(3);
 	String firstname=Fname[IndexName];
 	String lastname=Lname[IndexName];

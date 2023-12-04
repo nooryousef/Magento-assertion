@@ -44,14 +44,17 @@ public void SignUp() throws InterruptedException {
     softassert.assertAll();	
 }
 
-@Test(priority=2 , enabled=false)
+@Test(priority=2 )
 public void LogOut() throws InterruptedException  {
 	
 	driver.get(logout);
-	Thread.sleep(2000);
+	Thread.sleep(7000);
+	
+	softassert.assertEquals(driver.getCurrentUrl(), Website);
+	softassert.assertAll();
 }
 
-@Test(priority=3 ,enabled=false)
+@Test(priority=3 )
 public void LoginTest() {
 	driver.get(login);
 	WebElement Email=driver.findElement(By.id("email"));
@@ -61,7 +64,12 @@ public void LoginTest() {
 	Email.sendKeys(Magento.mail);
 	Password.sendKeys(Magento.password);
 	LogInButton.click();
+
+	String account=driver.findElement(By.className("base")).getText();
+	softassert.assertEquals(account.contains("My Account"), true);
+	softassert.assertAll();
 }
+
 
 @AfterTest
 public void MyAfterTest() {}
